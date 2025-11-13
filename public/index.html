@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>eSports Arena - Prototype</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <style>
+    body{font-family:Inter,Arial; background:#0b1020; color:#e6eef8; margin:0; padding:40px}
+    .card{background:#0f1724;padding:18px;border-radius:12px;max-width:900px;margin:20px auto}
+    input,button{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+    button{cursor:pointer}
+    .grid{display:flex;gap:12px;flex-wrap:wrap}
+    .tcard{background:#07102b;padding:12px;border-radius:10px;flex:1;min-width:240px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>eSports Arena — Prototype</h1>
+    <p id="status">Not signed in</p>
+
+    <div id="authUI">
+      <input id="email" placeholder="email" type="email" />
+      <input id="pass" placeholder="password" type="password" />
+      <button id="btnSignup">Sign up</button>
+      <button id="btnLogin">Login</button>
+      <button id="btnLogout" style="display:none">Logout</button>
+    </div>
+
+    <div style="margin-top:16px">
+      <a href="/player.html" style="color:#9ee0ff">Player dashboard</a> |
+      <a href="/organiser.html" style="color:#9ee0ff">Organiser dashboard</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Live tournaments</h3>
+    <div id="tournaments" class="grid"></div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
